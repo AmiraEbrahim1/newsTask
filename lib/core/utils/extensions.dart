@@ -62,7 +62,7 @@ extension StringExtension on String {
   get moveTo => pushRoute(this);
   // get pushAndRemoveAllUntil => pushRoute(this, isNewTask: true);
   // pushReplacementWithData(Map<String, dynamic>? arguments) => pushRoute(this, isToReplace: true, arguments: arguments);
-   pushWithData(Map<String, dynamic>? arguments) => pushRoute(this, arguments: arguments);
+   pushWithData(dynamic arguments) => pushRoute(this, arguments: arguments);
   // pushAndRemoveAllWithDataUntil(Map<String, dynamic>? arguments) => pushRoute(this, isNewTask: true, arguments: arguments);
   // popScreen([Object? object]) => pop(object);
   // popScreenWithArgument([Object? object]) => pop(object);

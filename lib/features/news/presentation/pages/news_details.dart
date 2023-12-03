@@ -6,12 +6,13 @@ import 'package:news_app/core/utils/extensions.dart';
 import 'package:news_app/core/utils/size-utils.dart';
 import 'package:news_app/features/news/data/models/news_response_model.dart';
 class NewsDetails extends StatelessWidget {
-   NewsDetails({super.key,required this.model});
+   NewsDetails({super.key});
    static const String modelKey="model";
 
    Results? model;
   @override
   Widget build(BuildContext context) {
+    model = (ModalRoute.of(context)!.settings.arguments as Map) ['model'] as Results;
     return Scaffold(
       appBar:buildAppBar,
       body: SingleChildScrollView(

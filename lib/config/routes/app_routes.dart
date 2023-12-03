@@ -25,8 +25,8 @@ class RouteGenerator {
     switch (routeSettings.name) {
       case Routes.newsRoute:
         return buildPageRoute(child: const News(), routeSettings: routeSettings);
-      // case Routes.newsDetailsRoute:
-      //   return buildPageRoute(child: NewsDetails(model: null,), routeSettings:routeSettings,);
+      case Routes.newsDetailsRoute:
+        return buildPageRoute(child: NewsDetails(), routeSettings:routeSettings,);
     }
     return buildPageRoute(
         child: const Center(
