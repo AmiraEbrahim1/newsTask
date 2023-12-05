@@ -12,14 +12,16 @@ class ShimmerItem extends StatefulWidget {
 class _NewsShimmerItemState extends State<ShimmerItem> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding:EdgeInsets.only(left: 16.w,right: 16.w,top: 20.h),
-      child: CustomShimmer.fromRectangle(
-        height:82.h,
-        width:105.w,
-        borderRadius: BorderRadius.circular(15),
-        baseColor: AppColors.primaryColor,
-        highlightColor: AppColors.whiteColor,
+    return ListView.builder(
+      itemBuilder:(context,index)=> Padding(
+        padding:EdgeInsets.only(left: 16.w,right: 16.w,top: 20.h),
+        child: CustomShimmer.fromRectangle(
+          height:82.h,
+          width:105.w,
+          borderRadius: BorderRadius.circular(15),
+          baseColor: AppColors.primaryColor,
+          highlightColor: AppColors.whiteColor,
+        ),
       ),
     );
   }

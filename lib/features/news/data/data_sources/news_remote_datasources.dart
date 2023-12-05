@@ -14,6 +14,8 @@ class NewsRemoteDataSourceImplWithDio extends NewsRemoteDataSource {
   Future<NewsResponseModel> getNews() async {
     /* dio is responsible for throwing exceptions and also converting json string to json*/
     var response = await client.getRequest(path: EndPoints.news+'${dotenv.env['APIKEY']}');
+    print('JEMI => ${response}');
+    print(NewsResponseModel.fromJson(response).results![0].title);
     return NewsResponseModel.fromJson(response);
   }
 }

@@ -49,7 +49,7 @@ TextStyle getRegularTextStyle({
   Color? decorationColor,
   Color? backgroundColor,
   double? height,
-  TextOverflow? overflow,
+  TextOverflow?overflow
 }) {
   return TextStyle(
     fontSize: fontSize,
@@ -65,7 +65,7 @@ TextStyle getRegularTextStyle({
     textBaseline: textBaseline,
     backgroundColor: backgroundColor,
     height: height,
-    overflow:overflow,
+    overflow: overflow
   );
 }
 
